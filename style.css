@@ -1,0 +1,46 @@
+/* Estilo geral */
+body {
+  margin: 0;
+  overflow: hidden;
+  background: black !important; /* Força o fundo preto */
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+/* Estilo do canvas dos fogos de artifício */
+canvas {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Fica atrás dos outros elementos */
+}
+
+
+/* Contêiner para o bolo, mensagem e coração */
+#content {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-align: center;
+  z-index: 2; /* Garante que fica acima do canvas */
+  color: white; /* Garante que o texto seja visível */
+}
+
+
+/* Estilo do bolo */
+#cake {
+  font-size: 18px;
+  white-space: pre-wrap;
+  margin: 0 auto;
+  color: white; /* Texto branco */
+}
+  
+/* Estilo do coração */
+#heart {
+  font-size: 22px;
+  margin-top: 30px;
+  white-space: pre-wrap;
+}

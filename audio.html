@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt - br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto de Áudio</title>
+
+  <!-- Elemento de áudio com controles -->
+  <audio id="backgroundMusic" controls>
+    <source src="audio/ssstik.io_1736475366593.mp3" type="audio/mpeg">
+    <audio preload="metadata" controls autoplay loop>
+    </audio>
+
+
+  <!-- Botões para controlar a música -->
+  <button onclick="playAudio()">Tocar Música</button>
+  <button onclick="pauseAudio()">Pausar Música</button>
+  
+  <script>
+    const music = document.getElementById("backgroundMusic");
+
+    // Função para tocar a música
+    function playAudio() {
+      music.play();
+    }
+
+    // Função para pausar a música
+    function pauseAudio() {
+      music.pause();
+    }
+  </script>
+</body>
+</html>
