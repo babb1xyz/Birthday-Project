@@ -1,5 +1,6 @@
 document.body.style.backgroundColor = "black"; 
-document.getElementById("cake").style.color = "white";
+document.getElementById("cake").style.color = "lightblue";
+
 
 // Canvas para fogos de artifício
 const canvas = document.getElementById("fireworksCanvas");
@@ -102,30 +103,33 @@ cakeElement.scrollTop = cakeElement.scrollHeight;
 // Modelo do bolo em ASCII
 const cakeLines = [ 
   "                                 ",
- "               @@@@         @@@@ ",
-  "             @@@@@@       @@@@@@    ",    
-  "            @@@@@@@@@   @@@@@@@@@ ",                    
-  "             @@@@@@@@@ @@@@@@@@@ ",
-  "              @@@@@@@@@@@@@@@@@                                                                                                                                  @@@@@@     @@@@@@ ",
-  "               @@@@@@@@@@@@@@@                                                                                                                                  @@@@@@@@   @@@@@@@@  ",
-  "                 @@@@@@@@@@@                                                                                                                                   @@@@@@@@@@ @@@@@@@@@@",
-  "                   @@@@@@@                                                                                                                                      @@@@@@@@@@@@@@@@@@@ ",
-  "                     @@@                                                        )                )                                                               @@@@@@@@@@@@@@@@@ ",   
-  "                      (                                                 )      (¨)              (¨)      )                                                        @@@@@@@@@@@@@@@ ",
-  "                       )                                               (¨)      |                |      (¨)                                                        @@@@@@@@@@@@@ ",                 
-  "                       (                                                |      |~|              |~|      |                                                          @@@@@@@@@@@   ",
-  "                        )                                              |~|     | |              | |     |~|                                                           @@@@@@@    ",
-  "                       (                                               | |     | |              | |     | |                                                             @@@   ",
-  "                        )                                             .| |a@@@@| |@@@@@@@@@@@@@@| |@@@@a| |.                                                             ) ",
-  "                                                                .,a@@@@| |@@@@@| |@@@@@@@@@@@@@@| |@@@@@| |@@@@a,.                                                       (  ",
-  "                                                               ,a@@@@@@| |@@@@@@@@@@@@@@@@.@@@@@@@@@@@@@| |@@@@@@@a,                                                     ) ",
-  "                                                              a@@@@@@@@@@@@@@@@@@@@@@@@@' . '@@@@@@@@@@@@@@@@@@@@@@@@a                                                   ( ",
+ "              ♡♡♡♡        ♡♡♡♡ ",
+ "             ♡♡♡♡♡♡     ♡♡♡♡♡♡",
+ "            ♡♡♡♡♡♡♡♡   ♡♡♡♡♡♡♡♡ ",
+ "           ♡♡♡♡♡♡♡♡♡  ♡♡♡♡♡♡♡♡♡ ",
+  "          ♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡  ",    
+  "          ♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡ ",                    
+  "           ♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡ ",
+  "            ♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡                                                                                                                                  ♡♡♡♡    ♡♡♡♡ ",
+  "              ♡♡♡♡♡♡♡♡♡♡♡♡♡♡                                                                                                                                   ♡♡♡♡♡   ♡♡♡♡♡  ",
+  "                ♡♡♡♡♡♡♡♡♡♡♡                                                                                                                                   ♡♡♡♡♡♡♡  ♡♡♡♡♡♡",
+  "                 ♡♡♡♡♡♡♡♡♡                                                                                                                                   ♡♡♡♡♡♡♡♡ ♡♡♡♡♡♡♡♡ ",
+  "                   ♡♡♡♡♡♡                                                     )                )                                                             ♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡",   
+  "                     ♡♡♡                                               )      (¨)              (¨)      )                                                    ♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡",
+  "                       )                                               (¨)      |                |      (¨)                                                   ♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡",                 
+  "                       (                                                |      |~|              |~|      |                                                     ♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡ ",
+  "                        )                                              |~|     | |              | |     |~|                                                     ♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡ ",
+  "                       (                                               | |     | |              | |     | |                                                       ♡♡♡♡♡♡♡♡♡♡♡♡♡ ",
+  "                        )                                             .| |a@@@@| |@@@@@@@@@@@@@@| |@@@@a| |.                                                        ♡♡♡♡♡♡♡♡♡♡",
+  "                        (                                       .,a@@@@| |@@@@@| |@@@@@@@@@@@@@@| |@@@@@| |@@@@a,.                                                   ♡♡♡♡♡♡♡ ",
+  "                                                               ,a@@@@@@| |@@@@@@@@@@@@@@@@.@@@@@@@@@@@@@| |@@@@@@@a,                                                  ♡♡♡♡♡",
+  "                                                              a@@@@@@@@@@@@@@@@@@@@@@@@@' . '@@@@@@@@@@@@@@@@@@@@@@@@a                                                  ♡♡♡",
   "                                                              ;'@@@@@@@@@@@@@@@@@@@@@@'   .   '@@@@@@@@@@@@@@@@@@@@@@';                                                   ) ",
-  "                                                              ;@@@'@@@@@@@@@@@@@@@@@'     .     '@@@@@@@@@@@@@@@@@'@@@; ",
-  "                                                              ;@@@;,.aaaaaaaaaaaaa        .        aaaaa,,aaa,;@@@;;;;; ",
-  "                                                              ;;@;;;;@@@@@@@@@@@;@       @.@       ;@;@@@@@@@;;;;@;;;;; ",
-  "                                                              ;;;;;;@@@@@@@@;@@;;@     @@ . @@     ;;@;;;;@@;@@@;;;;;;; ",
-  "                                                              ;;;;;;;;;@@;;;;;;;;;   @@   .   @@   ;;;;;;;;;;;@@;;;;;@; ",
+  "                                                              ;@@@'@@@@@@@@@@@@@@@@@'     .     '@@@@@@@@@@@@@@@@@'@@@;                                                   (  ",
+  "                                                              ;@@@;,.aaaaaaaaaaaaa        .        aaaaa,,aaa,;@@@;;;;;                                                    )",
+  "                                                              ;;@;;;;@@@@@@@@@@@;@       @.@       ;@;@@@@@@@;;;;@;;;;;                                                    ( ",
+  "                                                              ;;;;;;@@@@@@@@;@@;;@     @@ . @@     ;;@;;;;@@;@@@;;;;;;;                                                     ) ",
+  "                                                              ;;;;;;;;;@@;;;;;;;;;   @@   .   @@   ;;;;;;;;;;;@@;;;;;@;                                                     (",
   "                                                              ;;;;;;;;;;;;;;;;;;;; @@     .     @@ ;;;;;;;;;;;;;;;@@@;; ",
   "                                                          ,%%%;;;;;;;;;@;;;;;;;;;;        .        ;;;;;;;;;;;;;;;;@@;;%%%, ",
   "                                                       ,%%%%%%;;;;;;;;@@;;;;;;;;;;      .%%%.      ;;;;;;;;;;;;;;;;;;;;%%%%%%, ",
@@ -159,22 +163,22 @@ const cakeLines = [
   " FOREVERFOREVER          REVE        FOREVERFOREVER            VERF           FORE VE RFOR      FOREVERFOREVERFOREV       FOREVERFOR         FOREVERFOR   ",
   " FOREVERFOREV            RFOR        FOREVERFORE               OREV           FOREVERFOREV      FOREVERFOREVERFOREVE     FOREVERFOREV         FOREVERF  ",
   " FOREVERFOREVER          EVER        FOREVERFOREV              EVER           FORE VE VERF      FOREVERFOREVERFOREV     FOREVEVERFOREV         FOREVE  ",
-  " FOREVERFOREVERFO        FORE        FOREV    ERFOR            FORE           FORE    VERF      FOREVERFOREVERFORE     FOREV      ERFOR         FOR*     ,,,, ",
-  " FOREVERFOREVERF         VERF        FOREV      ERFOR          VERF           FORE    VERF      FOREVERFOREVERFO      FOREV        ERFOR        EVER    ,,,,,,   ",
-  " FOREVERFOREVE         FOREVERF      FOREV       ERFOR         OREV           FORE    VERF      FOREVERFOREVE        FOREV          ERFOR       FOR*     ,,,,   ",
-  "                                                                                                                                                        ,,,,             ",
-  "                                                                                                                                                      ,,,,,                                ",
-  "         @@@@            @@@@@@           @@@@@@      @@@@@@@@       @@@@@     @@@@@@@@@@@@@@         @@@@@                                               ",
-  "        @@@@@@            @@@@             @@@@       @@@@@@@@@      @@@@@     @@@@@@@@@@@@@@         @@@@@                   ",
-  "       @@@@@@@@           @@@@             @@@@       @@@@@@@@@@     @@@@@     @@@@                   @@@@@                       ",
-  "      @@@@@@@@@@          @@@@             @@@@       @@@@@ @@@@@    @@@@@     @@@@                   @@@@@                             ",
-  "     @@@@@@@@@@@@         @@@@             @@@@       @@@@@  @@@@@   @@@@@     @@@@@@@@@@@@@@         @@@@@                              ",
-  "    @@@@@@@@@@@@@@        @@@@             @@@@       @@@@@   @@@@@  @@@@@     @@@@@@@@@@@@@@         @@@@@                                  ",
-  "   @@@@@@@@@@@@@@@@       @@@@             @@@@       @@@@@    @@@@@ @@@@@     @@@@                                                   ",
-  "  @@@@@        @@@@@      @@@@             @@@@       @@@@@     @@@@@@@@@@     @@@@                   ,@@@,                         ",
-  " @@@@@          @@@@@     @@@@@@@@@@@@     @@@@       @@@@@      @@@@@@@@@     @@@@@@@@@@@@@@         @@@@@                                  ",
-  "@@@@@            @@@@@    @@@@@@@@@@@@    @@@@@@      @@@@@       @@@@@@@@     @@@@@@@@@@@@@@         ,@@@,                           ",
-];
+  " FOREVERFOREVERFO        FORE        FOREV    ERFOR            FORE           FORE    VERF      FOREVERFOREVERFORE     FOREV      ERFOR         FOR*      ",
+  " FOREVERFOREVERF         VERF        FOREV      ERFOR          VERF           FORE    VERF      FOREVERFOREVERFO      FOREV        ERFOR        EVER       ",
+  " FOREVERFOREVE         FOREVERF      FOREV       ERFOR         OREV           FORE    VERF      FOREVERFOREVE        FOREV          ERFOR       FOR*        ",
+  "                                                                                                                                                                     ",
+  "                                                                                                                                                                                      ",
+  "         AAAA            AAAAAA           AAAAAA      AAAAAAA        AAAAA     AAAAAAAAAAAA           @@@@@                                               ",
+  "        AAAAAA            AAAA             AAAA       AAAAAAAA       AAAAA     AAAAAAAAAAAA           @@@@@                   ",
+  "       AAAAAAAA           AAAA             AAAA       AAAAAAAAAA     AAAAA     AAAA                   @@@@@                       ",
+  "      AAAAAAAAAA          AAAA             AAAA       AAAAA AAAAA    AAAAA     AAAA                   @@@@@                             ",
+  "     AAAA - AAAA          AAAA             AAAA       AAAAA  AAAAA   AAAAA     AAAAAAAAAAAA           @@@@@                              ",
+  "    AAAAAA-AAAAAA         AAAA             AAAA       AAAAA   AAAAA  AAAAA     AAAAAAAAAAAA           @@@@@                                  ",
+  "   AAAAAAAAAAAAAAA        AAAA             AAAA       AAAAA    AAAAA AAAAA     AAAA                                                   ",
+  "  AAAAA       AAAAA       AAAA             AAAA       AAAAA     AAAAAAAAAA     AAAA                   ,@@@,                         ",
+  " AAAAA         AAAAA      AAAAAAAAAAAA     AAAA       AAAAA      AAAAAAAAA     AAAAAAAAAAAA           @@@@@                                  ",
+  "AAAAA           AAAAA     AAAAAAAAAAAA    AAAAAA      AAAAA      AAAAAAAAA     AAAAAAAAAAAA           ,@@@,                           ",
+]
 
 // Função para imprimir o bolo linha por linha com rolagem automática
 function printCake(lines, element, delay = 500) {
@@ -193,5 +197,5 @@ function printCake(lines, element, delay = 500) {
 }
 
 // Chama a função para começar a imprimir o bolo
-printCake(cakeLines, cakeElement, 500); // 150ms de intervalo entre linhas
+printCake(cakeLines, cakeElement, 200); // 150ms de intervalo entre linhas
 

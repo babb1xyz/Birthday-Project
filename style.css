@@ -35,8 +35,8 @@ canvas {
   font-size: 18px;
   white-space: pre-wrap;
   margin: 0 auto;
-  color: white; /* Texto branco */
-}
+  
+  }
   
 /* Estilo do coração */
 #heart {
