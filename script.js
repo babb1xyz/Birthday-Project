@@ -1,5 +1,5 @@
 document.body.style.backgroundColor = "black"; 
-document.getElementById("cake").style.color = "lightblue";
+document.getElementById("cake").style.color = "red";
 
 
 // Canvas para fogos de artifício
